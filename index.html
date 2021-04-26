@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyek 9C Kuartal 4</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/tailwindcss@^2/dist/base.min.css"
@@ -313,11 +314,11 @@
             />
           </svg>
           <h2 class="text-lg font-semibold text-gray-800">
-            Proyek 9C Kuarter 4
+            Proyek 9C Kuartal 4
           </h2>
           <p class="text-gray-500">
-            Halaman ini memuat semua proyek yang diselesaikan pada kuarter
-            terakhir, kuarter 4. <br />Di kuarter ini, kami belajar bioteknologi
+            Halaman ini memuat semua proyek yang diselesaikan pada kuartal
+            terakhir, kuartal 4. <br />Di kuartal ini, kami belajar bioteknologi
             konvensional, sumber daya alam Indonesia, dan model bisnis yang
             disajikan dalam bentuk teks tanggapan. Selain itu, kami belajar seni
             bela diri, desain gambar, dan teks biografi yang dimuat dalam bentuk
@@ -367,6 +368,29 @@
         </a>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var contents = document.querySelectorAll('div#content>div[id^="sdg"]');
+        contents.forEach(function (sdg) {
+          fetch(`${sdg.id}.html`)
+            .then((response) => response.text())
+            .then((text) => {
+              var parser = new DOMParser();
+              var htmlDocument = parser.parseFromString(text, "text/html");
+              var section = htmlDocument.documentElement.querySelector(
+                "article"
+              );
+              sdg.appendChild(section);
+              sdg.querySelectorAll("script").forEach(function (s) {
+                window.eval(s.innerHTML);
+              }); // this feels wrong
+            })
+            .catch((error) => {
+              console.error(`Error loading ${sdg.id}:`, error);
+            });
+        });
+      });
+    </script>
     <!-- snet -->
     <script></script>
   </body>
