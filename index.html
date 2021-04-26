@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^2/dist/base.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^2/dist/components.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@^2/dist/utilities.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.8/lottie.min.js"
+      integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/animdata.js" type="text/javascript"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+    </style>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Source Sans Pro", sans-serif;
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23bfbdba' fill-opacity='0.025'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: 50vh;
+      }
+    </style>
+  </head>
+
+  <body onload="document.querySelector('#sdg-front').scrollIntoView()">
+    <header
+      class="w-full mx-auto flex flex-wrap px-8 sm:justify-between py-4 flex-col sm:flex-row items-center border-b"
+    >
+      <a
+        class="flex title-font font-medium items-center text-gray-900 mb-2 sm:mb-0"
+        href="https://chrismark0106.wixsite.com/9cq1"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 1494.89 1657.4"
+          class="w-10 h-10 text-white"
+        >
+          <defs>
+            <linearGradient
+              id="a"
+              x1="830.28"
+              y1="656.06"
+              x2="1144.47"
+              y2="656.06"
+              gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, -54.67, 641.85)"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#23dfd4" />
+              <stop offset="0.1" stop-color="#2bd0d5" />
+              <stop offset="0.3" stop-color="#3faad8" />
+              <stop offset="0.57" stop-color="#606ddd" />
+              <stop offset="0.83" stop-color="#842ae3" />
+            </linearGradient>
+            <linearGradient
+              id="b"
+              x1="321.01"
+              y1="385.7"
+              x2="1113.21"
+              y2="385.7"
+              xlink:href="#a"
+            />
+          </defs>
+          <g style="isolation: isolate">
+            <path
+              d="M747.5,845.08c-49.2,0-95.19-10.81-129.51-30.43L445.24,715.82,60.49,495.72C27.94,477.1,10,452.87,10,427.49s17.92-49.56,50.47-68.12L618,40.44C652.24,20.81,698.21,10,747.44,10s95.2,10.81,129.45,30.43L1434.4,359.36c32.55,18.56,50.48,42.75,50.49,68.13s-17.93,49.61-50.48,68.23l-384.75,220.1L876.9,814.65C842.65,834.27,796.69,845.08,747.5,845.08Z"
+              style="fill: #d9fffa"
+            />
+            <path
+              d="M747.44,20a298.44,298.44,0,0,1,67.13,7.43c21.69,5,41,12.31,57.36,21.69l557.53,318.94c15.52,8.85,27.37,18.95,35.21,30,6.77,9.58,10.21,19.47,10.22,29.39s-3.44,19.83-10.22,29.43c-7.84,11.1-19.69,21.24-35.23,30.12l-126.55,72.39-258.2,147.71L871.92,806c-16.35,9.38-35.64,16.67-57.32,21.69a307.24,307.24,0,0,1-134.23,0c-21.7-5-41-12.32-57.41-21.69L450.21,707.14,192,559.43,65.45,487c-15.53-8.88-27.38-19-35.22-30.12C23.45,447.32,20,437.42,20,427.49s3.43-19.81,10.21-29.39C38.06,387,49.9,376.91,65.45,368L623,49.11c16.36-9.37,35.65-16.67,57.35-21.68A298.38,298.38,0,0,1,747.44,20m0-20C698.69,0,650,10.59,613,31.76L55.52,350.68C18.52,371.79,0,399.63,0,427.49s18.51,55.74,55.51,76.91l126.56,72.39L440.27,724.5,613,823.33c37,21.16,85.75,31.75,134.47,31.75s97.43-10.59,134.37-31.75l172.75-98.83,258.2-147.71,126.55-72.39c37-21.17,55.52-49,55.52-76.91s-18.52-55.71-55.53-76.81h0L881.86,31.76C844.92,10.59,796.18,0,747.44,0Z"
+              style="fill: #efefef"
+            />
+            <path
+              d="M1439.36,504.4l-126.55,72.39L1054.61,724.5,881.86,823.33c-36.94,21.16-85.65,31.75-134.37,31.75S650,844.49,613,823.33L440.27,724.51,182.08,576.81,55.52,504.41C18.52,483.24,0,455.36,0,427.5V635.89C0,651.3,5.89,666.68,17.22,681c9.14,11.54,21.77,22.37,38.3,31.83L258.13,828.71l354.89,203c37,21.17,85.75,31.76,134.47,31.76s97.43-10.59,134.37-31.76l354.88-203L1439.36,712.8c16.54-9.46,29.16-20.29,38.31-31.83,11.33-14.29,17.21-29.67,17.21-45.08V427.49c0,27.86-18.51,55.74-55.52,76.91Zm-47.42,157.74c-2.74,30.78-21.13,54.28-41.09,52.52s-33.92-28.16-31.2-58.93c2.65-29.85,20-52.81,39.32-52.52.59,0,1.17,0,1.76,0,8,.71,14.93,5.36,20.3,12.61,8.12,10.91,12.55,27.8,10.91,46.3Z"
+              style="fill: #23dfd4"
+            />
+            <path
+              d="M1494.88,726c0-15.42-5.89-30.79-17.21-45-9.15,11.54-21.77,22.37-38.31,31.83L1236.74,828.7l-354.88,203c-36.94,21.17-85.65,31.76-134.37,31.76S650,1052.89,613,1031.72l-354.89-203L55.52,712.79C39,703.33,26.36,692.5,17.22,681,5.89,695.22,0,710.59,0,726V934.39c0,14.86,5.43,29.69,16,43.53C5.45,991.75,0,1006.56,0,1021.42v208.39c0,27.86,18.51,55.74,55.51,76.91L613,1625.64c37,21.17,85.75,31.76,134.47,31.76s97.43-10.59,134.37-31.76l557.5-318.92c37-21.17,55.52-49,55.52-76.91V1021.42c0-14.86-5.43-29.68-16-43.5,10.53-13.84,16-28.67,16-43.53V726ZM3.47,746.79a70.07,70.07,0,0,0,2.9,6.8,68.86,68.86,0,0,1-4.63-13.7A67.57,67.57,0,0,0,3.47,746.79Zm0,295.42a70.07,70.07,0,0,0,2.9,6.8,69.17,69.17,0,0,1-4.63-13.71A67.75,67.75,0,0,0,3.47,1042.21Z"
+              style="fill: #842ae3"
+            />
+            <path
+              d="M1350.85,714.66c20,1.77,38.35-21.74,41.09-52.52,1.65-18.5-2.79-35.39-10.9-46.31-5.37-7.25-12.34-11.9-20.3-12.61-.59-.05-1.17,0-1.76,0-19.27-.28-36.67,22.67-39.32,52.52-2.74,30.78,11.22,57.16,31.19,58.94Z"
+              style="opacity: 0.400000005960465; isolation: isolate"
+            />
+            <path
+              d="M1481,1062.38a97.83,97.83,0,0,1-7.8,9.65,127.94,127.94,0,0,1-20.82,18.06q-6.06,4.26-13,8.23l-557.5,318.93C844.93,1438.41,796.22,1449,747.5,1449S650,1438.41,613,1417.25L55.52,1098.32q-6.69-3.81-13-8.23A127.1,127.1,0,0,1,21.7,1072a97.71,97.71,0,0,1-7.81-9.65c-9.24-13.1-13.88-27-13.88-41v208.39c0,27.86,18.51,55.74,55.51,76.91L613,1625.64c37,21.17,85.75,31.76,134.47,31.76s97.43-10.59,134.37-31.76l557.5-318.92c37-21.17,55.52-49,55.52-76.91V1021.42a64.48,64.48,0,0,1-3.48,20.8,79,79,0,0,1-10.41,20.16Zm-89.06,191c-2.74,30.78-21.13,54.28-41.09,52.52s-33.92-28.16-31.2-58.93,21.13-54.27,41.08-52.51S1394.66,1222.66,1391.94,1253.43Z"
+              style="opacity: 0.400000005960465; isolation: isolate"
+            />
+            <path
+              d="M1491.4,746.79A78.36,78.36,0,0,1,1481,767a100.22,100.22,0,0,1-7.8,9.65,127.88,127.88,0,0,1-20.82,18c-4,2.84-8.38,5.6-13,8.24l-123.84,70.84L881.86,1121.83c-36.94,21.17-85.65,31.76-134.37,31.76S650,1143,613,1121.83L179.35,873.75,55.51,802.91q-6.69-3.82-13-8.24a127,127,0,0,1-20.82-18A97.71,97.71,0,0,1,13.88,767C4.63,753.87,0,739.93,0,726V934.39c0,14.86,5.43,29.69,16,43.53,9.22,12.12,22.29,23.5,39.57,33.38L613,1330.23C650,1351.4,698.78,1362,747.5,1362s97.43-10.59,134.37-31.76l557.5-318.93c17.28-9.88,30.36-21.26,39.56-33.38,10.53-13.84,16-28.67,16-43.53V726A65,65,0,0,1,1491.4,746.79ZM1391.94,958.7c-2.74,30.77-21.13,54.27-41.09,52.51s-33.92-28.16-31.2-58.92,21.13-54.28,41.08-52.52c.13,0,.24.06.37.07,7,.73,13.26,4.53,18.3,10.47,9.15,10.78,14.28,28.66,12.54,48.39Z"
+              style="opacity: 0.400000005960465; isolation: isolate"
+            />
+            <path
+              d="M1350.85,714.66c20,1.77,38.35-21.74,41.09-52.52,1.65-18.5-2.79-35.39-10.9-46.31-5.37-7.25-12.34-11.9-20.3-12.61-.59-.05-1.17,0-1.76,0-19.27-.28-36.67,22.67-39.32,52.52-2.74,30.78,11.22,57.16,31.19,58.94Z"
+              style="fill: #20b2a4"
+            />
+            <g style="opacity: 0.7000000000000001; mix-blend-mode: hard-light">
+              <path
+                d="M1136.45,614.12a16.48,16.48,0,0,1-8.14-2L981.34,528a11.64,11.64,0,0,1-6-8.69,11.08,11.08,0,0,1,3.55-9.39c25.19-23.29,38.48-50,38.48-77.31s-13.33-54.11-38.55-77.41a11.06,11.06,0,0,1-3.59-9.42,11.64,11.64,0,0,1,6-8.7l146.86-84a16.68,16.68,0,0,1,8.21-2.07h.62a16.21,16.21,0,0,1,8.89,2.94c34.15,25.55,60.5,54,78.33,84.68,17.6,30.24,26.53,61.87,26.53,94s-8.9,63.71-26.47,93.93c-17.81,30.62-44.11,59.08-78.19,84.58l-.25.19-.92.59-.2.12A16.55,16.55,0,0,1,1136.45,614.12Z"
+                style="fill: #4d4d4d"
+              />
+              <path
+                d="M1136.3,260h.32a7,7,0,0,1,3.83,1.18c134.9,100.91,135,241.85.17,342.75l-.45.29a8.3,8.3,0,0,1-7.42,0l-146.94-84c-1.72-1-2-2.51-.77-3.69,55.14-51,55.11-116.88-.11-167.91-1.27-1.18-.95-2.71.77-3.69l146.86-84a7.72,7.72,0,0,1,3.74-.89m0-18a25.6,25.6,0,0,0-12.65,3.24l-146.89,84a20.54,20.54,0,0,0-10.47,15.46,20,20,0,0,0,6.34,17l0,0,0,0c23.33,21.55,35.66,46,35.66,70.8s-12.29,49.16-35.55,70.67l0,0,0,0a20,20,0,0,0-6.34,17,20.57,20.57,0,0,0,10.48,15.47l146.94,84,0,0h0a26.18,26.18,0,0,0,25.23,0l.43-.24.4-.26.45-.29.52-.34.5-.37c35-26.24,62.16-55.6,80.58-87.27s27.7-64.74,27.69-98.45-9.34-66.89-27.75-98.53-45.59-61.07-80.69-87.33l0,0,0,0a24.8,24.8,0,0,0-13.78-4.7h-.15l-.93,0Z"
+                style="fill: #4d4d4d"
+              />
+              <path
+                d="M747.73,724.11c-65.18,0-128.74-7.06-188.93-21-62.17-14.4-117.81-35.49-165.36-62.69-48.3-27.63-85.78-60-111.4-96.2-25.1-35.46-37.83-73.06-37.83-111.74S256.93,356.24,282,320.79c25.6-36.18,63.05-68.52,111.32-96.12,47.51-27.18,103.11-48.25,165.25-62.64,60.15-13.92,123.69-21,188.84-21,109.91,0,214.08,19.94,301.33,57.68a15.31,15.31,0,0,1,3.6,1.48,11.13,11.13,0,0,1,.41,19.59,9.46,9.46,0,0,1-1,.57L905.28,304.18a16.51,16.51,0,0,1-8.2,2.08,17.15,17.15,0,0,1-5.71-.95c-43.73-15.5-93.78-23.69-144.74-23.69-72.61,0-140.93,16.2-192.35,45.61C504.45,355.73,477,393.14,477,432.55s27.44,76.84,77.27,105.34c51.45,29.43,119.8,45.64,192.46,45.64,50.94,0,101-8.18,144.65-23.66a17.16,17.16,0,0,1,5.74-1,16.37,16.37,0,0,1,8.21,2.09l147.09,84.13h0a11.14,11.14,0,0,1-.25,19.81l-.15.08-.91.47-.24.1C963.29,703.88,858.46,724.11,747.73,724.11Z"
+                style="fill: #4d4d4d"
+              />
+              <path
+                d="M747.43,150.05c104.83,0,210.05,18.87,298.47,57.25a6.35,6.35,0,0,1,2,.72c2,1.17,2,3.06,0,4.23-.06,0-.08.08-.19.1l-146.87,84a7.62,7.62,0,0,1-3.73.89,8.32,8.32,0,0,1-2.71-.44c-45.89-16.26-97-24.2-147.74-24.2-71.88,0-142.9,16-196.82,46.8-109.06,62.38-109.06,163.89,0,226.29,54,30.86,125,46.82,196.93,46.82,50.68,0,101.81-7.94,147.65-24.17a8.33,8.33,0,0,1,2.74-.45,7.66,7.66,0,0,1,3.72.89l146.94,84.05.09,0c2,1.17,2,3-.09,4.18l-.52.27C958.66,696.08,853,715.11,747.73,715.11c-127.44,0-254.35-27.89-349.82-82.5C205,522.26,205,342.76,397.81,232.48c95.4-54.57,222.22-82.43,349.62-82.43m0-18c-65.84,0-130,7.14-190.87,21.21-63,14.59-119.41,36-167.69,63.59-49.41,28.27-87.83,61.49-114.2,98.74a222.29,222.29,0,0,0-29.47,57.07,184.16,184.16,0,0,0,0,119.66,222.54,222.54,0,0,0,29.49,57.1c26.39,37.28,64.84,70.52,114.28,98.81,48.31,27.63,104.77,49,167.8,63.64,60.85,14.1,125.1,21.24,191,21.24a857.92,857.92,0,0,0,159.38-14.67c53.12-10.07,102.71-25.08,147.38-44.6l.48-.21.47-.24.52-.27.32-.15.3-.18a20.12,20.12,0,0,0,.41-35.42l-.3-.18-146.86-84a25.51,25.51,0,0,0-12.69-3.28,26.3,26.3,0,0,0-8.72,1.47c-42.76,15.15-91.74,23.15-141.67,23.15-71.12,0-137.88-15.79-188-44.45C511.85,503.25,486,468.61,486,432.55s25.83-70.68,72.73-97.5c50.08-28.65,116.8-44.43,187.88-44.43,50,0,99,8,141.73,23.17a26,26,0,0,0,8.72,1.47A25.61,25.61,0,0,0,909.75,312l146.32-83.71c.52-.27,1-.56,1.52-.88a20.13,20.13,0,0,0-.75-35,24.31,24.31,0,0,0-5-2.16c-44.24-19.08-93.23-33.76-145.64-43.65a859,859,0,0,0-158.73-14.54Z"
+                style="fill: #4d4d4d"
+              />
+            </g>
+            <path
+              d="M1136.45,589.12a16.48,16.48,0,0,1-8.14-2L981.34,503a11.64,11.64,0,0,1-6-8.69,11.08,11.08,0,0,1,3.55-9.39c25.19-23.29,38.48-50,38.48-77.31s-13.33-54.11-38.55-77.41a11.06,11.06,0,0,1-3.59-9.42,11.64,11.64,0,0,1,6-8.7l146.86-84a16.68,16.68,0,0,1,8.21-2.07h.62a16.21,16.21,0,0,1,8.89,2.94c34.15,25.55,60.5,54,78.33,84.68,17.6,30.24,26.53,61.87,26.53,94s-8.9,63.71-26.47,93.93c-17.81,30.62-44.11,59.08-78.19,84.58l-.25.19-.92.59-.2.12A16.55,16.55,0,0,1,1136.45,589.12Z"
+              style="fill: url(#a)"
+            />
+            <path
+              d="M1136.3,235h.32a7,7,0,0,1,3.83,1.18c134.9,100.91,135,241.85.17,342.75l-.45.29a8.3,8.3,0,0,1-7.42,0L985.81,495.2c-1.72-1-2-2.51-.77-3.69,55.14-51,55.11-116.88-.11-167.91-1.27-1.18-.95-2.71.77-3.69l146.86-84a7.72,7.72,0,0,1,3.74-.89m0-18a25.6,25.6,0,0,0-12.65,3.24l-146.89,84a20.54,20.54,0,0,0-10.47,15.46,20,20,0,0,0,6.34,17l0,0,0,0c23.33,21.55,35.66,46,35.66,70.8s-12.29,49.16-35.55,70.67l0,0,0,0a20,20,0,0,0-6.34,17,20.57,20.57,0,0,0,10.48,15.47l146.94,84,0,0h0a26.18,26.18,0,0,0,25.23,0l.43-.24.4-.26.45-.29.52-.34.5-.37c35-26.24,62.16-55.6,80.58-87.27s27.7-64.74,27.69-98.45-9.34-66.89-27.75-98.53-45.59-61.07-80.69-87.33l0,0,0,0a24.8,24.8,0,0,0-13.78-4.7h-.15l-.93,0Z"
+              style="fill: #fff"
+            />
+            <path
+              d="M747.73,699.11c-65.18,0-128.74-7.06-188.93-21-62.17-14.4-117.81-35.49-165.36-62.69-48.3-27.63-85.78-60-111.4-96.2-25.1-35.46-37.83-73.06-37.83-111.74S256.93,331.24,282,295.79c25.6-36.18,63.05-68.52,111.32-96.12,47.51-27.18,103.11-48.25,165.25-62.64,60.15-13.92,123.69-21,188.84-21,109.91,0,214.08,19.94,301.33,57.68a15.31,15.31,0,0,1,3.6,1.48,11.13,11.13,0,0,1,.41,19.59,9.46,9.46,0,0,1-1,.57L905.28,279.18a16.51,16.51,0,0,1-8.2,2.08,17.15,17.15,0,0,1-5.71-.95c-43.73-15.5-93.78-23.69-144.74-23.69-72.61,0-140.93,16.2-192.35,45.61C504.45,330.73,477,368.14,477,407.55s27.44,76.84,77.27,105.34c51.45,29.43,119.8,45.64,192.46,45.64,50.94,0,101-8.18,144.65-23.66a17.16,17.16,0,0,1,5.74-1,16.37,16.37,0,0,1,8.21,2.09l147.09,84.13h0a11.14,11.14,0,0,1-.25,19.81l-.15.08-.91.47-.24.1C963.29,678.88,858.46,699.11,747.73,699.11Z"
+              style="fill: url(#b)"
+            />
+            <path
+              d="M747.43,125.05c104.83,0,210.05,18.87,298.47,57.25a6.35,6.35,0,0,1,2,.72c2,1.17,2,3.06,0,4.23-.06,0-.08.08-.19.1l-146.87,84a7.62,7.62,0,0,1-3.73.89,8.32,8.32,0,0,1-2.71-.44c-45.89-16.26-97-24.2-147.74-24.2-71.88,0-142.9,16-196.82,46.8-109.06,62.38-109.06,163.89,0,226.29,54,30.86,125,46.82,196.93,46.82,50.68,0,101.81-7.94,147.65-24.17a8.33,8.33,0,0,1,2.74-.45,7.66,7.66,0,0,1,3.72.89l146.94,84.05.09,0c2,1.17,2,3-.09,4.18l-.52.27C958.66,671.08,853,690.11,747.73,690.11c-127.44,0-254.35-27.89-349.82-82.5C205,497.26,205,317.76,397.81,207.48c95.4-54.57,222.22-82.43,349.62-82.43m0-18c-65.84,0-130,7.14-190.87,21.21-63,14.59-119.41,36-167.69,63.59-49.41,28.27-87.83,61.49-114.2,98.74a222.29,222.29,0,0,0-29.47,57.07,184.16,184.16,0,0,0,0,119.66,222.54,222.54,0,0,0,29.49,57.1c26.39,37.28,64.84,70.52,114.28,98.81,48.31,27.63,104.77,49,167.8,63.64,60.85,14.1,125.1,21.24,191,21.24a857.92,857.92,0,0,0,159.38-14.67c53.12-10.07,102.71-25.08,147.38-44.6l.48-.21.47-.24.52-.27.32-.15.3-.18a20.12,20.12,0,0,0,.41-35.42l-.3-.18-146.86-84a25.51,25.51,0,0,0-12.69-3.28,26.3,26.3,0,0,0-8.72,1.47c-42.76,15.15-91.74,23.15-141.67,23.15-71.12,0-137.88-15.79-188-44.45C511.85,478.25,486,443.61,486,407.55s25.83-70.68,72.73-97.5c50.08-28.65,116.8-44.43,187.88-44.43,50,0,99,8,141.73,23.17a26,26,0,0,0,8.72,1.47A25.61,25.61,0,0,0,909.75,287l146.32-83.71c.52-.27,1-.56,1.52-.88a20.13,20.13,0,0,0-.75-35,24.31,24.31,0,0,0-5-2.16c-44.24-19.08-93.23-33.76-145.64-43.65a859,859,0,0,0-158.73-14.54Z"
+              style="fill: #fff"
+            />
+            <g style="opacity: 0.4">
+              <path
+                d="M1136.3,234.55h.32a7,7,0,0,1,3.83,1.18c134.9,100.91,135,241.85.17,342.75l-.45.29a8.3,8.3,0,0,1-7.42,0l-146.94-84c-1.72-1-2-2.51-.77-3.69,55.14-51,55.11-116.88-.11-167.91-1.27-1.18-.95-2.71.77-3.69l146.86-84h0a7.72,7.72,0,0,1,3.74-.89m0-8a15.6,15.6,0,0,0-7.7,1.93l-146.88,84a10.67,10.67,0,0,0-5.5,7.94,10.06,10.06,0,0,0,3.24,8.54c25.47,23.53,38.91,50.55,38.91,78.18s-13.4,54.56-38.76,78a10.08,10.08,0,0,0-3.27,8.57,10.63,10.63,0,0,0,5.5,7.94l146.94,84.05a16.21,16.21,0,0,0,15.36,0l.19-.1.18-.12.45-.29.23-.15.22-.17c34-25.42,60.19-53.78,77.92-84.28,17.48-30.07,26.35-61.51,26.34-93.43s-8.88-63.41-26.4-93.5c-17.76-30.53-44-58.91-78-84.35a15.1,15.1,0,0,0-8.28-2.77h-.66Z"
+                style="fill: #528fcc"
+              />
+              <path
+                d="M747.43,124.59c104.83,0,210.05,18.87,298.47,57.25a6.35,6.35,0,0,1,2,.72c2,1.17,2,3.06,0,4.23-.06,0-.08.08-.19.1l-146.87,84a7.62,7.62,0,0,1-3.73.89,8.32,8.32,0,0,1-2.71-.44c-45.89-16.26-97-24.2-147.74-24.2-71.88,0-142.9,16-196.82,46.8-109.06,62.38-109.06,163.89,0,226.29,54,30.86,125,46.82,196.93,46.82,50.68,0,101.81-7.94,147.65-24.17a8.33,8.33,0,0,1,2.74-.45,7.66,7.66,0,0,1,3.72.89l146.94,84,.09.05c2,1.17,2,3-.09,4.18l-.52.27C958.66,670.62,853,689.65,747.73,689.65c-127.44,0-254.35-27.89-349.82-82.5C205,496.8,205,317.3,397.81,207c95.4-54.57,222.22-82.43,349.62-82.43m0-8c-65.08,0-128.54,7-188.61,21-62.05,14.36-117.56,35.4-165,62.52-48.14,27.54-85.49,59.78-111,95.84a212.67,212.67,0,0,0-28.16,54.49,174.14,174.14,0,0,0,0,113.26,212,212,0,0,0,28.18,54.52c25.53,36.08,62.91,68.35,111.08,95.91C441.4,641.24,497,662.3,559,676.67c60.11,13.92,123.6,21,188.7,21a848.07,848.07,0,0,0,157.51-14.5c52.39-9.93,101.26-24.71,145.25-43.93l.21-.1.21-.1.52-.27.14-.07.14-.08a10.13,10.13,0,0,0,.22-18.06l-.19-.12-146.91-84a15.45,15.45,0,0,0-7.68-1.94,16.36,16.36,0,0,0-5.4.9c-43.81,15.52-94,23.72-145,23.72-72.84,0-141.36-16.26-193-45.77C503.64,484.61,476,446.89,476,407.09s27.61-77.5,77.76-106.18c51.57-29.5,120.06-45.75,192.85-45.75,51.08,0,101.24,8.21,145.07,23.74a16,16,0,0,0,5.38.9,15.5,15.5,0,0,0,7.7-1.94L1051.33,194a7.73,7.73,0,0,0,.88-.51,10.14,10.14,0,0,0-.34-17.89,14.35,14.35,0,0,0-3.44-1.4c-43.72-18.92-92.2-33.47-144.13-43.26a848.44,848.44,0,0,0-156.87-14.37Z"
+                style="fill: #528fcc"
+              />
+            </g>
+          </g>
+        </svg>
+        <span class="ml-3 text-xl font-bold">Christopher G</span>
+      </a>
+      <a href="https://chrismark0106.wixsite.com/9cq1/9c-q4">
+        <button
+          class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-2 sm:mt-0"
+        >
+          Kembali
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </a>
+    </header>
+    <main>
+      <section
+        id="sdg-front"
+        class="flex flex-col sm:flex-row items-center h-auto sm:h-screen border-b"
+      >
+        <div class="w-full mx-auto mb-4 px-4 py-4">
+          <div class="text-center">
+            <a href="https://sdg2030indonesia.org/" target="_blank"
+              ><img
+                src="assets/img/sdg-horizontal.png"
+                class="inline w-2/3 md:w-1/3"
+            /></a>
+          </div>
+          <div
+            id="card-selector"
+            class="flex flex-col sm:flex-row justify-center items-stretch gap-4 mx-4 px-4 py-4 mx-auto"
+          >
+            <div
+              class="transition duration-500 transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg rounded-lg w-full sm:w-60 md:w-80 cursor-pointer"
+            >
+              <a
+                href="#sdg12-bio"
+                class="w-full block h-full"
+                onclick="switchContent('sdg12-bio')"
+              >
+                <img
+                  src="https://source.unsplash.com/K6fD41pMeXg/640x480"
+                  class="h-36 w-full object-cover"
+                />
+                <div class="bg-white w-full h-full p-4">
+                  <p class="text-yellow-600 text-md font-medium">
+                    BI, Biologi, IPS, Prakarya, IT
+                  </p>
+                  <p class="text-gray-800 text-xl font-semibold mb-1">
+                    Bioteknologi Konvensional Pangan Indonesia
+                  </p>
+                  <p class="text-gray-500 font-light text-md">Short desc</p>
+                </div>
+              </a>
+            </div>
+            <div
+              class="transition duration-500 transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg rounded-lg w-full sm:w-60 md:w-80 cursor-pointer"
+            >
+              <a
+                href="#sdg16-pe"
+                class="w-full block h-full"
+                onclick="switchContent('sdg16-pe')"
+              >
+                <img
+                  src="https://source.unsplash.com/HN_4K2diUWs/640x480"
+                  class="h-36 w-full object-cover"
+                />
+                <div class="bg-white w-full h-full p-4">
+                  <p class="text-blue-900 text-md font-medium">
+                    PJOK, English, Visual Art
+                  </p>
+                  <p class="text-gray-800 text-xl font-semibold mb-1">
+                    Seni Bela Diri Karate
+                  </p>
+                  <p class="text-gray-500 font-light text-md">Short desc</p>
+                </div>
+              </a>
+            </div>
+            <div
+              class="transition duration-500 transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg rounded-lg w-full sm:w-60 md:w-80 cursor-pointer"
+            >
+              <a
+                href="#sdg16-bs"
+                class="w-full block h-full"
+                onclick="switchContent('sdg16-bs')"
+              >
+                <img
+                  src="https://source.unsplash.com/v2HgNzRDfII/640x480"
+                  class="h-36 w-full object-cover"
+                />
+                <div class="bg-white w-full h-full p-4">
+                  <p class="text-green-600 text-md font-medium">
+                    BS, EC, PPKN, Matematika
+                  </p>
+                  <p class="text-gray-800 text-xl font-semibold mb-1">
+                    Perayaan Kekristenan
+                  </p>
+                  <p class="text-gray-500 font-light text-md">Short desc</p>
+                </div>
+              </a>
+            </div>
+            <script>
+              function switchContent(contentID) {
+                document.querySelector(
+                  `section#content>#${contentID}`
+                ).style.display = "";
+                document
+                  .querySelectorAll(`section#content>:not(#${contentID})`)
+                  .forEach(function (elem) {
+                    elem.style.display = "none";
+                  });
+              }
+            </script>
+          </div>
+        </div>
+        <div
+          class="text-center sm:absolute bottom-4 sm:bottom-8 sm:left-1/2 sm:transform sm:-translate-x-1/2"
+        >
+          <a href="#content">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="#A8A8A8"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section id="content" class="py-4">
+        <section
+          id="empty-message"
+          class="max-w-2xl px-4 py-20 mx-auto space-y-1 text-center h-screen flex flex-col justify-center items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="mx-auto w-28 sm:w-1/4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#A8A8A8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+            />
+          </svg>
+          <h2 class="text-lg font-semibold text-gray-800">
+            Proyek 9C Kuarter 4
+          </h2>
+          <p class="text-gray-500">
+            Halaman ini memuat semua proyek yang diselesaikan pada kuarter
+            terakhir, kuarter 4. <br />Di kuarter ini, kami belajar bioteknologi
+            konvensional, sumber daya alam Indonesia, dan model bisnis yang
+            disajikan dalam bentuk teks tanggapan. Selain itu, kami belajar seni
+            bela diri, desain gambar, dan teks biografi yang dimuat dalam bentuk
+            poster. Kami juga belajar tentang perayaan kekristenan, persatuan
+            dan keberagaman Indonesia, dan fungsi kuadrat yang dibuat dalam
+            bentuk teks laporan. Semua proyek yang dibuat kemudian ditampilkan
+            di halaman ini yang dibuat dalam pelajaran IT. Semoga hasil proyek
+            yang dikerjakan dapat bermanfaat dan menginspirasi.
+          </p>
+        </section>
+        <section id="sdg12-bio" style="display: none">
+          <article
+            class="px-4 py-4 mx-auto max-w-7xl"
+            itemid="#"
+            itemscope
+            itemtype="http://schema.org/BlogPosting"
+          >
+            <div class="w-full mx-auto mb-10 text-left md:w-3/4 lg:w-2/3">
+              <div class="pb-6 mb-6 border-b border-gray-200">
+                <h1
+                  class="mb-3 text-lg sm:text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"
+                  itemprop="headline"
+                  title="SDG 12 - Konsumsi dan Produksi yang Bertanggung Jawab"
+                >
+                  SDG 12 - Konsumsi dan Produksi yang Bertanggung Jawab
+                </h1>
+                <p class="text-sm sm:text-base text-gray-500">
+                  19 April 2021 — Christopher Gijoh
+                </p>
+              </div>
+              <div class="object-contain w-full bg-center">
+                <div
+                  class="lottie"
+                  data-goal="goal12"
+                  onmouseover="animg12.goToAndPlay(0)"
+                ></div>
+                <script>
+                  var animg12 = sdgAnim(
+                    document.querySelector(".lottie[data-goal='goal12']")
+                  );
+                </script>
+              </div>
+            </div>
+
+            <div
+              class="w-full mx-auto md:w-3/4 lg:w-2/3 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none sm:text-justify space-y-2 border-b border-gray-200"
+            >
+              <p class="lead">Dalam proyek ini,</p>
+              <h3>Apa yang perlu diubah?</h3>
+              <p>
+                Mengurangi kerugian makanan dan sampah makanan dalam produksi
+                dapat membantu kelestarian lingkungan dengan cara menurunkan
+                produksi biaya dan meningkatkan efisiensi sistem pangan. Saat
+                ini, kita kehilangan 13,8 persen makanan setelah panen, selama
+                pengangkutan, penyimpanan, pengolahan sendiri, menyebabkan
+                kerugian biaya lebih dari 400 miliar dolar tiap tahun tahun.
+              </p>
+              <hr />
+              <h3>8 Tujuan SDG 12</h3>
+              <ol>
+                <li>
+                  Mengimplementasikan Kerangka Kerja 10 tahun dari program
+                  konsumsi dan produksi yang berkelanjutan, dimana seluruh
+                  negara melakukan aksi, dengan dipelopori negara-negara maju,
+                  dengan melihat pembangunan dan kemampuan dari negara-negara
+                  berkembang
+                </li>
+                <li>
+                  Pada tahun 2030, mencapai manajemen berkelanjutan dan
+                  penggunaan yang efisien dari sumber daya alam
+                </li>
+                <li>
+                  Pada tahun 2030, mengurangi separuh jumlah dari sampah pangan
+                  global perkapita pada tingkat retail dan konsumen dan
+                  mengurangi kerugian makanan sepanjang produksi dan rantai
+                  penawaran, termasuk kerugian paska panen
+                </li>
+                <li>
+                  Pada tahun 2020, meraih manajemen ramah lingkungan dari bahan
+                  kimia dan limbah lainnya sepanjang siklus hidupnya, sesuai
+                  dengan kerangka kerja internasional yang telah disepakati, dan
+                  secara signifikan mengurangi pelepasan bahan-bahan tersebut ke
+                  udara, air dan tanah dalam rangka meminimalisir dampak buruk
+                  bahan tersebut terhadap kesehatan manusia dan lingkungan
+                </li>
+                <li>
+                  Pada tahun 2030, secara substansial mengurangi produksi limbah
+                  melalui tindakan pencegahan, pengurangan, daur ulang dan
+                  penggunaan kembali
+                </li>
+                <li>
+                  Mendorong perusahaan, terutama perusahaan skala besar dan
+                  transnasional untuk mengadopsi praktek-praktek yang
+                  bekelanjutan dan untuk memasukkan informasi yang berkelanjutan
+                  di dalam siklus laporan mereka
+                </li>
+                <li>
+                  Mendukung praktek-praktek pengadaan barang publik yang
+                  berkelanjutan, sesuai dengan kebijakan dan prioritas nasional
+                </li>
+                <li>
+                  Pada tahun 2030, memastikan bahwa setiap orang dimanapun
+                  mendapatkan informasi yang relevan dan kesadaran untuk
+                  pembangunan dan gaya hidup yang berkelanjutan secara harmonis
+                  dengan alam
+                </li>
+              </ol>
+              <p>...</p>
+            </div>
+            <div
+              class="text-xs md:text-sm lg:text-base w-full mx-auto mb-10 text-left md:w-3/4 lg:w-2/3 py-4 flex flex-row justify-center justify-items-stretch"
+            >
+              <div class="w-1/2">
+                <p class="text-gray-600 text-left">
+                  BI, Biologi, IPS, Prakarya, IT
+                </p>
+              </div>
+              <div class="w-1/2"></div>
+            </div>
+          </article>
+        </section>
+        <section id="sdg16-pe" style="display: none">
+          <article
+            class="px-4 py-4 mx-auto max-w-7xl"
+            itemid="#"
+            itemscope
+            itemtype="http://schema.org/BlogPosting"
+          >
+            <div class="w-full mx-auto mb-10 text-left md:w-3/4 lg:w-2/3">
+              <div class="pb-6 mb-6 border-b border-gray-200">
+                <h1
+                  class="mb-3 text-lg sm:text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"
+                  itemprop="headline"
+                  title="SDG 16 - Perdamaian, Keadilan, dan Kelembagaan yang Kuat"
+                >
+                  SDG 16 - Perdamaian, Keadilan, dan Kelembagaan yang Kuat
+                </h1>
+                <p class="text-sm sm:text-base text-gray-500">
+                  24 April 2021 — Christopher Gijoh
+                </p>
+              </div>
+              <div class="object-contain w-full bg-center">
+                <div
+                  class="lottie"
+                  data-goal="goal16"
+                  onmouseover="animg16.goToAndPlay(0)"
+                ></div>
+                <script>
+                  var animg16 = sdgAnim(
+                    document.querySelector(".lottie[data-goal='goal16']")
+                  );
+                </script>
+              </div>
+            </div>
+
+            <div
+              class="w-full mx-auto md:w-3/4 lg:w-2/3 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none sm:text-justify space-y-2 border-b border-gray-200"
+            >
+              <p class="lead">
+                Pertumbuhan dan perkembangan ekonomi memerlukan produksi barang
+                dan jasa yang meningkatkan kualitas hidup. Pembangunan
+                berkelanjutan memerlukan pengurangan penggunaan sumber daya alam
+                dan bahan beracun dan berbagai limbah dan polutan yang
+                dihasilkan di seluruh proses produksi dan konsumsi.
+              </p>
+              <h3>Apa yang perlu diubah?</h3>
+              <p>
+                Mengurangi kerugian makanan dan sampah makanan dalam produksi
+                dapat membantu kelestarian lingkungan dengan cara menurunkan
+                produksi biaya dan meningkatkan efisiensi sistem pangan. Saat
+                ini, kita kehilangan 13,8 persen makanan setelah panen, selama
+                pengangkutan, penyimpanan, pengolahan sendiri, menyebabkan
+                kerugian biaya lebih dari 400 miliar dolar tiap tahun tahun.
+              </p>
+              <hr />
+              <h3>8 Tujuan SDG 12</h3>
+              <ol>
+                <li>
+                  Mengimplementasikan Kerangka Kerja 10 tahun dari program
+                  konsumsi dan produksi yang berkelanjutan, dimana seluruh
+                  negara melakukan aksi, dengan dipelopori negara-negara maju,
+                  dengan melihat pembangunan dan kemampuan dari negara-negara
+                  berkembang
+                </li>
+                <li>
+                  Pada tahun 2030, mencapai manajemen berkelanjutan dan
+                  penggunaan yang efisien dari sumber daya alam
+                </li>
+                <li>
+                  Pada tahun 2030, mengurangi separuh jumlah dari sampah pangan
+                  global perkapita pada tingkat retail dan konsumen dan
+                  mengurangi kerugian makanan sepanjang produksi dan rantai
+                  penawaran, termasuk kerugian paska panen
+                </li>
+                <li>
+                  Pada tahun 2020, meraih manajemen ramah lingkungan dari bahan
+                  kimia dan limbah lainnya sepanjang siklus hidupnya, sesuai
+                  dengan kerangka kerja internasional yang telah disepakati, dan
+                  secara signifikan mengurangi pelepasan bahan-bahan tersebut ke
+                  udara, air dan tanah dalam rangka meminimalisir dampak buruk
+                  bahan tersebut terhadap kesehatan manusia dan lingkungan
+                </li>
+                <li>
+                  Pada tahun 2030, secara substansial mengurangi produksi limbah
+                  melalui tindakan pencegahan, pengurangan, daur ulang dan
+                  penggunaan kembali
+                </li>
+                <li>
+                  Mendorong perusahaan, terutama perusahaan skala besar dan
+                  transnasional untuk mengadopsi praktek-praktek yang
+                  bekelanjutan dan untuk memasukkan informasi yang berkelanjutan
+                  di dalam siklus laporan mereka
+                </li>
+                <li>
+                  Mendukung praktek-praktek pengadaan barang publik yang
+                  berkelanjutan, sesuai dengan kebijakan dan prioritas nasional
+                </li>
+                <li>
+                  Pada tahun 2030, memastikan bahwa setiap orang dimanapun
+                  mendapatkan informasi yang relevan dan kesadaran untuk
+                  pembangunan dan gaya hidup yang berkelanjutan secara harmonis
+                  dengan alam
+                </li>
+              </ol>
+              <p>...</p>
+            </div>
+            <div
+              class="text-xs md:text-sm lg:text-base w-full mx-auto mb-10 text-left md:w-3/4 lg:w-2/3 py-4 flex flex-row justify-center justify-items-stretch"
+            >
+              <div class="w-1/2">
+                <p class="text-gray-600 text-left">PJOK, English, Visual Art</p>
+              </div>
+              <div class="w-1/2"></div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+    <footer
+      class="flex flex-col items-center justify-between px-4 py-4 mx-auto max-w-7xl sm:flex-row border-t"
+    >
+      <span class="mb-4 sm:mb-0">
+        <p class="text-sm text-center text-gray-700 sm:text-left">
+          Christopher G 2021
+        </p>
+        <p class="text-gray-500 text-sm hover:underline">
+          Dibuat dengan framework &nbsp;<a
+            href="https://tailwindcss.com"
+            target="_blank"
+            ><img
+              src="https://tailwindcss.com/_next/static/media/tailwindcss-logotype.128b6e12eb85d013bc9f80a917f57efe.svg"
+              class="w-auto inline align-baseline m-0"
+              style="height: 0.8em"
+          /></a>
+        </p>
+      </span>
+      <div class="flex items-center">
+        <a href="https://github.com/ChrisG661/9cq4">
+          <span class="text-sm">Lihat sumber di</span>
+          <svg
+            class="w-4 h-4 inline align-center ml-1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32.58 31.77"
+          >
+            <path
+              d="M16.29,0a16.29,16.29,0,0,0-5.15,31.75c.82.15,1.11-.36,1.11-.79s0-1.41,0-2.77C7.7,29.18,6.74,26,6.74,26a4.36,4.36,0,0,0-1.81-2.39c-1.47-1,.12-1,.12-1a3.43,3.43,0,0,1,2.49,1.68,3.48,3.48,0,0,0,4.74,1.36,3.46,3.46,0,0,1,1-2.18c-3.62-.41-7.42-1.81-7.42-8a6.3,6.3,0,0,1,1.67-4.37,5.94,5.94,0,0,1,.16-4.31s1.37-.44,4.48,1.67a15.41,15.41,0,0,1,8.16,0c3.11-2.11,4.47-1.67,4.47-1.67A5.91,5.91,0,0,1,25,11.07a6.3,6.3,0,0,1,1.67,4.37c0,6.26-3.81,7.63-7.44,8a3.85,3.85,0,0,1,1.11,3c0,2.18,0,3.94,0,4.47s.29.94,1.12.78A16.29,16.29,0,0,0,16.29,0Z"
+              style="fill: #191717; fill-rule: evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <!-- snet -->
+    <script></script>
+  </body>
+</html>
