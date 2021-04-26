@@ -181,7 +181,7 @@
       </a>
     </header>
     <main>
-      <section
+      <div
         id="sdg-front"
         class="flex flex-col sm:flex-row items-center h-auto sm:h-screen border-b"
       >
@@ -200,11 +200,7 @@
             <div
               class="transition duration-500 transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg rounded-lg w-full sm:w-60 md:w-80 cursor-pointer"
             >
-              <a
-                href="#sdg12-bio"
-                class="w-full block h-full"
-                onclick="switchContent('sdg12-bio')"
-              >
+              <a href="#sdg12-bio" class="w-full block h-full">
                 <img
                   src="https://source.unsplash.com/K6fD41pMeXg/640x480"
                   class="h-36 w-full object-cover"
@@ -223,11 +219,7 @@
             <div
               class="transition duration-500 transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg rounded-lg w-full sm:w-60 md:w-80 cursor-pointer"
             >
-              <a
-                href="#sdg16-pe"
-                class="w-full block h-full"
-                onclick="switchContent('sdg16-pe')"
-              >
+              <a href="#sdg16-pe" class="w-full block h-full">
                 <img
                   src="https://source.unsplash.com/HN_4K2diUWs/640x480"
                   class="h-36 w-full object-cover"
@@ -246,11 +238,7 @@
             <div
               class="transition duration-500 transform hover:scale-105 hover:shadow-xl overflow-hidden shadow-lg rounded-lg w-full sm:w-60 md:w-80 cursor-pointer"
             >
-              <a
-                href="#sdg16-bs"
-                class="w-full block h-full"
-                onclick="switchContent('sdg16-bs')"
-              >
+              <a href="#sdg16-bs" class="w-full block h-full">
                 <img
                   src="https://source.unsplash.com/v2HgNzRDfII/640x480"
                   class="h-36 w-full object-cover"
@@ -266,19 +254,25 @@
                 </div>
               </a>
             </div>
-            <script>
-              function switchContent(contentID) {
-                document.querySelector(
-                  `section#content>#${contentID}`
-                ).style.display = "";
-                document
-                  .querySelectorAll(`section#content>:not(#${contentID})`)
-                  .forEach(function (elem) {
-                    elem.style.display = "none";
-                  });
-              }
-            </script>
           </div>
+          <script>
+            function switchContent(contentID) {
+              document.querySelector(`div#content>${contentID}`).style.display =
+                "";
+              document
+                .querySelectorAll(`div#content>:not(${contentID})`)
+                .forEach(function (elem) {
+                  elem.style.display = "none";
+                });
+            }
+            document
+              .querySelectorAll("#card-selector>div>a")
+              .forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                  switchContent(btn.hash);
+                });
+              });
+          </script>
         </div>
         <div
           class="text-center sm:absolute bottom-4 sm:bottom-8 sm:left-1/2 sm:transform sm:-translate-x-1/2"
@@ -298,9 +292,9 @@
             </svg>
           </a>
         </div>
-      </section>
-      <section id="content" class="py-4">
-        <section
+      </div>
+      <div id="content" class="py-4">
+        <div
           id="empty-message"
           class="max-w-2xl px-4 py-20 mx-auto space-y-1 text-center h-screen flex flex-col justify-center items-center"
         >
@@ -333,234 +327,11 @@
             di halaman ini yang dibuat dalam pelajaran IT. Semoga hasil proyek
             yang dikerjakan dapat bermanfaat dan menginspirasi.
           </p>
-        </section>
-        <section id="sdg12-bio" style="display: none">
-          <article
-            class="px-4 py-4 mx-auto max-w-7xl"
-            itemid="#"
-            itemscope
-            itemtype="http://schema.org/BlogPosting"
-          >
-            <div class="w-full mx-auto mb-10 text-left md:w-3/4 lg:w-2/3">
-              <div class="pb-6 mb-6 border-b border-gray-200">
-                <h1
-                  class="mb-3 text-lg sm:text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"
-                  itemprop="headline"
-                  title="SDG 12 - Konsumsi dan Produksi yang Bertanggung Jawab"
-                >
-                  SDG 12 - Konsumsi dan Produksi yang Bertanggung Jawab
-                </h1>
-                <p class="text-sm sm:text-base text-gray-500">
-                  19 April 2021 — Christopher Gijoh
-                </p>
-              </div>
-              <div class="object-contain w-full bg-center">
-                <div
-                  class="lottie"
-                  data-goal="goal12"
-                  onmouseover="animg12.goToAndPlay(0)"
-                ></div>
-                <script>
-                  var animg12 = sdgAnim(
-                    document.querySelector(".lottie[data-goal='goal12']")
-                  );
-                </script>
-              </div>
-            </div>
-
-            <div
-              class="w-full mx-auto md:w-3/4 lg:w-2/3 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none sm:text-justify space-y-2 border-b border-gray-200"
-            >
-              <p class="lead">Dalam proyek ini,</p>
-              <h3>Apa yang perlu diubah?</h3>
-              <p>
-                Mengurangi kerugian makanan dan sampah makanan dalam produksi
-                dapat membantu kelestarian lingkungan dengan cara menurunkan
-                produksi biaya dan meningkatkan efisiensi sistem pangan. Saat
-                ini, kita kehilangan 13,8 persen makanan setelah panen, selama
-                pengangkutan, penyimpanan, pengolahan sendiri, menyebabkan
-                kerugian biaya lebih dari 400 miliar dolar tiap tahun tahun.
-              </p>
-              <hr />
-              <h3>8 Tujuan SDG 12</h3>
-              <ol>
-                <li>
-                  Mengimplementasikan Kerangka Kerja 10 tahun dari program
-                  konsumsi dan produksi yang berkelanjutan, dimana seluruh
-                  negara melakukan aksi, dengan dipelopori negara-negara maju,
-                  dengan melihat pembangunan dan kemampuan dari negara-negara
-                  berkembang
-                </li>
-                <li>
-                  Pada tahun 2030, mencapai manajemen berkelanjutan dan
-                  penggunaan yang efisien dari sumber daya alam
-                </li>
-                <li>
-                  Pada tahun 2030, mengurangi separuh jumlah dari sampah pangan
-                  global perkapita pada tingkat retail dan konsumen dan
-                  mengurangi kerugian makanan sepanjang produksi dan rantai
-                  penawaran, termasuk kerugian paska panen
-                </li>
-                <li>
-                  Pada tahun 2020, meraih manajemen ramah lingkungan dari bahan
-                  kimia dan limbah lainnya sepanjang siklus hidupnya, sesuai
-                  dengan kerangka kerja internasional yang telah disepakati, dan
-                  secara signifikan mengurangi pelepasan bahan-bahan tersebut ke
-                  udara, air dan tanah dalam rangka meminimalisir dampak buruk
-                  bahan tersebut terhadap kesehatan manusia dan lingkungan
-                </li>
-                <li>
-                  Pada tahun 2030, secara substansial mengurangi produksi limbah
-                  melalui tindakan pencegahan, pengurangan, daur ulang dan
-                  penggunaan kembali
-                </li>
-                <li>
-                  Mendorong perusahaan, terutama perusahaan skala besar dan
-                  transnasional untuk mengadopsi praktek-praktek yang
-                  bekelanjutan dan untuk memasukkan informasi yang berkelanjutan
-                  di dalam siklus laporan mereka
-                </li>
-                <li>
-                  Mendukung praktek-praktek pengadaan barang publik yang
-                  berkelanjutan, sesuai dengan kebijakan dan prioritas nasional
-                </li>
-                <li>
-                  Pada tahun 2030, memastikan bahwa setiap orang dimanapun
-                  mendapatkan informasi yang relevan dan kesadaran untuk
-                  pembangunan dan gaya hidup yang berkelanjutan secara harmonis
-                  dengan alam
-                </li>
-              </ol>
-              <p>...</p>
-            </div>
-            <div
-              class="text-xs md:text-sm lg:text-base w-full mx-auto mb-10 text-left md:w-3/4 lg:w-2/3 py-4 flex flex-row justify-center justify-items-stretch"
-            >
-              <div class="w-1/2">
-                <p class="text-gray-600 text-left">
-                  BI, Biologi, IPS, Prakarya, IT
-                </p>
-              </div>
-              <div class="w-1/2"></div>
-            </div>
-          </article>
-        </section>
-        <section id="sdg16-pe" style="display: none">
-          <article
-            class="px-4 py-4 mx-auto max-w-7xl"
-            itemid="#"
-            itemscope
-            itemtype="http://schema.org/BlogPosting"
-          >
-            <div class="w-full mx-auto mb-10 text-left md:w-3/4 lg:w-2/3">
-              <div class="pb-6 mb-6 border-b border-gray-200">
-                <h1
-                  class="mb-3 text-lg sm:text-3xl font-bold text-gray-900 md:leading-tight md:text-4xl"
-                  itemprop="headline"
-                  title="SDG 16 - Perdamaian, Keadilan, dan Kelembagaan yang Kuat"
-                >
-                  SDG 16 - Perdamaian, Keadilan, dan Kelembagaan yang Kuat
-                </h1>
-                <p class="text-sm sm:text-base text-gray-500">
-                  24 April 2021 — Christopher Gijoh
-                </p>
-              </div>
-              <div class="object-contain w-full bg-center">
-                <div
-                  class="lottie"
-                  data-goal="goal16"
-                  onmouseover="animg16.goToAndPlay(0)"
-                ></div>
-                <script>
-                  var animg16 = sdgAnim(
-                    document.querySelector(".lottie[data-goal='goal16']")
-                  );
-                </script>
-              </div>
-            </div>
-
-            <div
-              class="w-full mx-auto md:w-3/4 lg:w-2/3 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none sm:text-justify space-y-2 border-b border-gray-200"
-            >
-              <p class="lead">
-                Pertumbuhan dan perkembangan ekonomi memerlukan produksi barang
-                dan jasa yang meningkatkan kualitas hidup. Pembangunan
-                berkelanjutan memerlukan pengurangan penggunaan sumber daya alam
-                dan bahan beracun dan berbagai limbah dan polutan yang
-                dihasilkan di seluruh proses produksi dan konsumsi.
-              </p>
-              <h3>Apa yang perlu diubah?</h3>
-              <p>
-                Mengurangi kerugian makanan dan sampah makanan dalam produksi
-                dapat membantu kelestarian lingkungan dengan cara menurunkan
-                produksi biaya dan meningkatkan efisiensi sistem pangan. Saat
-                ini, kita kehilangan 13,8 persen makanan setelah panen, selama
-                pengangkutan, penyimpanan, pengolahan sendiri, menyebabkan
-                kerugian biaya lebih dari 400 miliar dolar tiap tahun tahun.
-              </p>
-              <hr />
-              <h3>8 Tujuan SDG 12</h3>
-              <ol>
-                <li>
-                  Mengimplementasikan Kerangka Kerja 10 tahun dari program
-                  konsumsi dan produksi yang berkelanjutan, dimana seluruh
-                  negara melakukan aksi, dengan dipelopori negara-negara maju,
-                  dengan melihat pembangunan dan kemampuan dari negara-negara
-                  berkembang
-                </li>
-                <li>
-                  Pada tahun 2030, mencapai manajemen berkelanjutan dan
-                  penggunaan yang efisien dari sumber daya alam
-                </li>
-                <li>
-                  Pada tahun 2030, mengurangi separuh jumlah dari sampah pangan
-                  global perkapita pada tingkat retail dan konsumen dan
-                  mengurangi kerugian makanan sepanjang produksi dan rantai
-                  penawaran, termasuk kerugian paska panen
-                </li>
-                <li>
-                  Pada tahun 2020, meraih manajemen ramah lingkungan dari bahan
-                  kimia dan limbah lainnya sepanjang siklus hidupnya, sesuai
-                  dengan kerangka kerja internasional yang telah disepakati, dan
-                  secara signifikan mengurangi pelepasan bahan-bahan tersebut ke
-                  udara, air dan tanah dalam rangka meminimalisir dampak buruk
-                  bahan tersebut terhadap kesehatan manusia dan lingkungan
-                </li>
-                <li>
-                  Pada tahun 2030, secara substansial mengurangi produksi limbah
-                  melalui tindakan pencegahan, pengurangan, daur ulang dan
-                  penggunaan kembali
-                </li>
-                <li>
-                  Mendorong perusahaan, terutama perusahaan skala besar dan
-                  transnasional untuk mengadopsi praktek-praktek yang
-                  bekelanjutan dan untuk memasukkan informasi yang berkelanjutan
-                  di dalam siklus laporan mereka
-                </li>
-                <li>
-                  Mendukung praktek-praktek pengadaan barang publik yang
-                  berkelanjutan, sesuai dengan kebijakan dan prioritas nasional
-                </li>
-                <li>
-                  Pada tahun 2030, memastikan bahwa setiap orang dimanapun
-                  mendapatkan informasi yang relevan dan kesadaran untuk
-                  pembangunan dan gaya hidup yang berkelanjutan secara harmonis
-                  dengan alam
-                </li>
-              </ol>
-              <p>...</p>
-            </div>
-            <div
-              class="text-xs md:text-sm lg:text-base w-full mx-auto mb-10 text-left md:w-3/4 lg:w-2/3 py-4 flex flex-row justify-center justify-items-stretch"
-            >
-              <div class="w-1/2">
-                <p class="text-gray-600 text-left">PJOK, English, Visual Art</p>
-              </div>
-              <div class="w-1/2"></div>
-            </div>
-          </article>
-        </section>
-      </section>
+        </div>
+        <div id="sdg12-bio" style="display: none"></div>
+        <div id="sdg16-pe" style="display: none"></div>
+        <div id="sdg16-bs" style="display: none"></div>
+      </div>
     </main>
     <footer
       class="flex flex-col items-center justify-between px-4 py-4 mx-auto max-w-7xl sm:flex-row border-t"
