@@ -1,15 +1,22 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
-  important: true,
+  purge: ["html/*.html"],
+  darkMode: false,
   theme: {
     fontFamily: {
       sans: ['"Source Sans Pro"', "sans-serif"],
       serif: ["Merriweather", "serif"],
     },
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: null,
+          },
+        },
+      },
+    },
   },
   variants: {
     extend: {},
@@ -21,5 +28,22 @@ module.exports = {
       });
     }),
     require("@tailwindcss/typography"),
+    require("tailwindcss-scroll-snap"),
+    require("tailwind-heropatterns")({
+      variants: [],
+      patterns: [
+        "random-shapes",
+        "church-on-sunday",
+        "circuit-board",
+        "plus",
+        "i-like-food",
+      ],
+      colors: {
+        default: "#BFBDBA",
+      },
+      opacity: {
+        default: "0.025",
+      },
+    }),
   ],
 };
