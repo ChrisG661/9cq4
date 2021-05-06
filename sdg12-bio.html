@@ -273,6 +273,33 @@
               Karena itu, orang-orang sekarang lebih memilih makanan cepat saji
               dibanding makanan yang dibuat dengan bioteknologi konvensional.
             </p>
+            <figure class="pt-2 mx-auto">
+              <div
+                class="flex flex-row items-stretch w-full mx-auto space-x-1 justify-evenly justify-items-stretch h-80"
+              >
+                <img
+                  src="assets/img/sdg12-bio/food-idk.jpg"
+                  class="flex-1 object-cover min-w-0 m-0"
+                />
+                <img
+                  src="assets/img/sdg12-bio/globalization-city.jpg"
+                  class="flex-1 object-cover min-w-0 m-0"
+                />
+                <img
+                  src="assets/img/sdg12-bio/fastfood-menu.jpg"
+                  class="flex-1 object-cover min-w-0 m-0"
+                />
+                <style>
+                  /* #4 */
+                  .m-0 {
+                    margin: 0 !important;
+                  }
+                </style>
+              </div>
+              <figcaption class="text-center text-gray-500">
+                <!-- suggest a caption plz -->
+              </figcaption>
+            </figure>
             <p>
               Namun, tidak semua jenis makanan cepat saji sehat dan aman untuk
               dikonsumsi secara terus menerus, terutama dalam porsi yang
@@ -306,6 +333,8 @@
             <br />
           </div>
           <div class="prose-sm prose sm:prose lg:prose-lg xl:prose-xl">
+            <hr />
+            <h2 id="proses-pembuatan">Proses pembuatan Roti Tawar</h2>
             <figure class="pt-2 mx-auto">
               <div
                 class="flex flex-row items-stretch w-full mx-auto space-x-1 justify-evenly justify-items-stretch h-80"
@@ -333,8 +362,6 @@
                 Produk roti tawar dengan menggunakan bioteknologi konvensional
               </figcaption>
             </figure>
-            <hr />
-            <h2 id="proses-pembuatan">Proses pembuatan Roti Tawar</h2>
             <h4>Alat yang digunakan:</h4>
             <ol>
               <li>1 Mixer untuk mencampur adonan</li>
@@ -379,26 +406,30 @@
             }
           </style>
           <script>
-            document.querySelector("#image-slider-roti").style.display = "none";
-            for (
-              i = 1;
-              i <=
-              Number(
-                document.querySelector("#image-slider-roti").dataset.imgcount
-              );
-              i++
-            ) {
-              document.querySelector(
-                "#image-slider-roti .splide__list"
-              ).innerHTML += `<div class="splide__slide"><img src="assets/img/sdg12-bio/roti/roti-${i}.jpg" loading="lazy" /></div>`;
-            }
-            document.addEventListener("DOMContentLoaded", function () {
-              document.querySelector("#image-slider-roti").style.display = "";
+            function loadSliderRoti() {
+              for (
+                i = 1;
+                i <=
+                Number(
+                  document.querySelector("#image-slider-roti").dataset.imgcount
+                );
+                i++
+              ) {
+                document.querySelector(
+                  "#image-slider-roti .splide__list"
+                ).innerHTML += `<div class="splide__slide"><img src="assets/img/sdg12-bio/roti/roti-${i}.jpg" loading="lazy" /></div>`;
+              }
               new Splide("#image-slider-roti", {
                 //cover: true,
                 height: "60vh",
                 //lazyLoad: "nearby",
               }).mount();
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+              loadSliderRoti();
+            });
+            document.addEventListener("MainPageContentLoaded", function () {
+              loadSliderRoti();
             });
           </script>
           <div class="prose-sm prose sm:prose lg:prose-lg xl:prose-xl">

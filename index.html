@@ -164,10 +164,10 @@
           </div>
         </div>
       </div>
-      <div id="content" class="py-4">
+      <div id="content" class="py-4 bg-white">
         <div
           id="empty-message"
-          class="flex flex-col items-center justify-center w-full h-screen px-4 py-20 space-y-1 text-center bg-white bg-hero-circuit-board"
+          class="flex flex-col items-center justify-center w-full h-screen px-4 py-20 space-y-1 text-center bg-hero-circuit-board"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -246,30 +246,43 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var contents = document.querySelectorAll('div#content>div[id^="sdg"]');
+        promises = [];
         contents.forEach(function (sdg) {
-          fetch(`${sdg.id}.html`)
-            .then((response) => {
-              if (!response.ok) {
-                sdg.innerHTML +=
-                  '<svg class="w-6 h-6 mx-auto text-gray-400 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
-                throw Error(response.statusText);
-              }
-              return response.text();
-            })
-            .then((text) => {
-              var parser = new DOMParser();
-              var htmlDocument = parser.parseFromString(text, "text/html");
-              var section = htmlDocument.documentElement.querySelector(
-                "article"
-              );
-              sdg.appendChild(section);
-              sdg.querySelectorAll("script").forEach(function (s) {
-                window.eval(s.innerHTML);
-              }); // this feels wrong
-            })
-            .catch((error) => {
-              console.error(`Error loading ${sdg.id}:`, error);
-            });
+          promises.push(
+            fetch(`${sdg.id}.html`)
+              .then((response) => {
+                if (!response.ok) {
+                  sdg.innerHTML +=
+                    '<svg class="w-6 h-6 mx-auto text-gray-400 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+                  throw Error(response.statusText);
+                }
+                return response.text();
+              })
+              .then((text) => {
+                var parser = new DOMParser();
+                var htmlDocument = parser.parseFromString(text, "text/html");
+                var section = htmlDocument.documentElement.querySelector(
+                  "article"
+                );
+                sdg.appendChild(section);
+                sdg.querySelectorAll("script").forEach(function (s) {
+                  window.eval(s.innerHTML);
+                }); // this feels wrong
+              })
+              .catch((error) => {
+                console.error(`Error loading ${sdg.id}:`, error);
+              })
+          );
+        });
+        Promise.all(promises).then(function () {
+          setTimeout(function () {
+            window.document.dispatchEvent(
+              new Event("MainPageContentLoaded", {
+                bubbles: true,
+                cancelable: true,
+              })
+            );
+          }, 3000);
         });
       });
     </script>
