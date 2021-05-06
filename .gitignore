@@ -2,3 +2,5 @@
 note.md
 sdg*.md
 *src.md
+**/Thumbs.db
+assets-src/*
