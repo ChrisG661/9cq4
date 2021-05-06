@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  [class*="bg-hero"] {
+    background-size: 50vh;
+  }
+}
