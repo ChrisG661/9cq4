@@ -348,7 +348,7 @@
                   class="flex-1 object-cover min-w-0 m-0"
                 />
                 <img
-                  src="assets/img/sdg12-bio/roti/roti-17.jpg"
+                  src="assets/img/sdg12-bio/roti/roti-16.jpg"
                   class="flex-1 object-cover min-w-0 m-0"
                 />
                 <style>
@@ -391,7 +391,7 @@
           <div
             class="w-full bg-gray-100 rounded-lg splide"
             id="image-slider-roti"
-            data-imgcount="17"
+            data-imgcount="16"
           >
             <div class="splide__track">
               <div class="splide__list"></div>
@@ -417,12 +417,12 @@
               ) {
                 document.querySelector(
                   "#image-slider-roti .splide__list"
-                ).innerHTML += `<div class="splide__slide"><img src="assets/img/sdg12-bio/roti/roti-${i}.jpg" loading="lazy" /></div>`;
+                ).innerHTML += `<div class="splide__slide"><img data-splide-lazy="assets/img/sdg12-bio/roti/roti-${i}.jpg" /></div>`;
               }
               new Splide("#image-slider-roti", {
                 //cover: true,
                 height: "60vh",
-                //lazyLoad: "nearby",
+                lazyLoad: "nearby",
               }).mount();
             }
             document.addEventListener("DOMContentLoaded", function () {
