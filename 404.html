@@ -19,12 +19,25 @@
     >
       <a
         class="flex items-center mb-2 font-medium text-gray-900 title-font sm:mb-0"
-        href="https://chrismark0106.wixsite.com/9cq1"
+        href="./"
       >
         <img src="assets/svg/logo.svg" class="w-10 h-10 text-white" />
         <span class="ml-3 text-xl font-bold">Christopher G</span>
       </a>
-      <a href="https://chrismark0106.wixsite.com/9cq1/9c-q4">
+      <nav
+        class="flex flex-wrap items-center justify-center text-base md:ml-auto"
+      >
+        <a class="mr-2 sm:mr-5 hover:text-gray-900" href="./sdg12-bio.html"
+          >SDG 12 - Biologi</a
+        >
+        <a class="mr-2 sm:mr-5 hover:text-gray-900" href="./sdg16-pe.html"
+          >SDG 16 - PE</a
+        >
+        <a class="mr-2 sm:mr-5 hover:text-gray-900" href="./sdg16-bs.html"
+          >SDG 16 - BS</a
+        >
+      </nav>
+      <a href="https://chrismark0106.wixsite.com/9cq1">
         <button
           class="inline-flex items-center px-3 py-1 mt-2 text-base bg-gray-100 border-0 rounded focus:outline-none hover:bg-gray-200 sm:mt-0"
         >
@@ -43,9 +56,11 @@
         </button>
       </a>
     </header>
-    <main>
+    <main
+      class="flex flex-col justify-center h-screen bg-white bg-hero-circuit-board"
+    >
       <div
-        class="flex flex-col items-center h-auto bg-white border-b sm:flex-row sm:h-screen bg-hero-circuit-board"
+        class="flex flex-col items-center justify-center flex-grow sm:flex-row"
         id="not-found"
       >
         <section class="px-4 py-32 mx-auto max-w-7xl">
@@ -65,20 +80,30 @@
             </p>
           </div>
         </section>
-        <div
-          style="
-            position: absolute;
-            left: 50%;
-            bottom: -1rem;
-            transform: translateX(-50%);
-          "
+      </div>
+      <div
+        class="flex flex-col items-center justify-center py-4 mx-auto space-x-1 text-center text-gray-500 align-middle border-b sm:flex-row divide-solid"
+      >
+        <span
+          >Alamat IP Anda:
+          <span class="font-semibold text-gray-700"
+            >{{ .Req.Header.Get "X-Forwarded-For" }}</span
+          ></span
         >
-          <span class="text-gray-500">Alamat IP Anda: </span><span class="font-semibold text-gray-700">{{ .Req.Header.Get "X-Forwarded-For" }}</span>
-          &nbsp;&#x2022;&nbsp;
-          <span class="text-gray-500">URI: </span><span class="font-semibold text-gray-700">{{placeholder "http.request.uri.path"}}</span>
-          &nbsp;&#x2022;&nbsp;
-          <span class="text-gray-500">Waktu: </span><span class="font-semibold text-gray-700">{{placeholder "time.now.common_log"}}</span>
-        </div>
+        <span class="hidden text-gray-700 sm:block">&#x2022;</span>
+        <span
+          >URI:
+          <span class="font-semibold text-gray-700"
+            >{{placeholder "http.request.uri.path"}}</span
+          ></span
+        >
+        <span class="hidden text-gray-700 sm:block">&#x2022;</span>
+        <span
+          >Waktu:
+          <span class="font-semibold text-gray-700"
+            >{{placeholder "time.now.common_log"}}</span
+          ></span
+        >
       </div>
     </main>
     <footer
@@ -117,7 +142,7 @@
     </footer>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector("#not-found").scrollIntoView();
+        document.querySelector("main").scrollIntoView();
       });
     </script>
     <noscript
