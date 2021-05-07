@@ -35,7 +35,7 @@ jobs:
       - name: Configure dist directory
         run: |
           mkdir -p dist
-          cp ./src/* ./dist
+          cp -r ./src/* ./dist
           rm ./dist/assets/css/tailwind.css
         
       - name: TailwindCSS dependencies
