@@ -54,4 +54,4 @@ jobs:
           git add -A
           git commit -m "Production build `date`"
           git checkout -B production
-          git push --force origin production
+          git push origin production
