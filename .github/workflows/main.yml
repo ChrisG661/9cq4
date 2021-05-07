@@ -52,6 +52,6 @@ jobs:
       - name: commit
         run: |
           git add -A
-          git commit -m "Production build ${date}"
+          git commit -m "Production build `date`"
           git checkout -B production
           git push --force origin production
