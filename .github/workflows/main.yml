@@ -2,17 +2,17 @@
 
 name: CI build production
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
     paths:
-      - 'dist/'
-      - 'tailwind.config.js'
-      - 'tailwind.config.css'
+      - "dist/"
+      - "tailwind.config.js"
+      - "tailwind.config.css"
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,19 +31,19 @@ jobs:
       - name: Setup nodejs
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: "14"
       - name: Configure dist directory
         run: |
           mkdir -p dist
           cp -r ./src/* ./dist
           rm ./dist/assets/css/tailwind.css
-        
+
       - name: TailwindCSS dependencies
         run: npm install -D tailwindcss@latest postcss@latest autoprefixer@latest tailwindcss-cli@latest @tailwindcss/typography@latest tailwindcss-scroll-snap@latest tailwind-heropatterns@latest
-      
+
       - name: Build production
-        run: NODE_ENV=production npx tailwindcss-cli@latest build ./src/tailwind.config.css -c ./src/tailwind.config.js -o ./dist/assets/css/tailwind.css
-      
+        run: NODE_ENV=production npx tailwindcss-cli@latest build ./tailwind.config.css -c ./tailwind.config.js -o ./dist/assets/css/tailwind.css
+
       - name: setup git config
         run: |
           git config user.name "Actions: Production Bot"
@@ -51,7 +51,7 @@ jobs:
 
       - name: commit
         run: |
-          git add dist/
+          git add -A
           git commit -m "Production build ${date}"
           git checkout -B production
           git push origin production
