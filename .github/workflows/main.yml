@@ -8,7 +8,7 @@ on:
   push:
     branches: [master]
     paths:
-      - "dist/"
+      - "src/"
       - "tailwind.config.js"
       - "tailwind.config.css"
   pull_request:
