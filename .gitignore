@@ -4,3 +4,4 @@ sdg*.md
 *src.md
 **/Thumbs.db
 assets-src/*
+node_modules/
