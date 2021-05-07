@@ -32,8 +32,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Remove testing tailwindcss
-        run: rm ./src/assets/css/tailwind.css
+      - name: Configure dist directory
+        run: |
+          mkdir -p dist
+          cp ./src/* ./dist
+          rm ./dist/assets/css/tailwind.css
         
       - name: TailwindCSS dependencies
         run: npm install -D tailwindcss@latest postcss@latest autoprefixer@latest tailwindcss-cli@latest @tailwindcss/typography@latest tailwindcss-scroll-snap@latest tailwind-heropatterns@latest
@@ -48,7 +51,7 @@ jobs:
 
       - name: commit
         run: |
-          git add -A
+          git add dist/
           git commit -m "Production build ${date}"
           git checkout -B production
           git push origin production
