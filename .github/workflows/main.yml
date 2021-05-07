@@ -7,6 +7,10 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
+    paths:
+      - 'dist/'
+      - 'tailwind.config.js'
+      - 'tailwind.config.css'
   pull_request:
     branches: [ master ]
 
@@ -46,4 +50,5 @@ jobs:
         run: |
           git add -A
           git commit -m "Production build ${date}"
+          git checkout -B production
           git push origin production
