@@ -51,7 +51,9 @@ jobs:
 
       - name: commit
         run: |
+          git checkout --orphan production
           git add -A
-          git commit -m "Production build `date`"
-          git checkout -B production
-          git push origin production
+          git commit -am "Production build `date`"
+          git branch -D master
+          git branch -m master
+          git push -f origin production
