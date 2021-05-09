@@ -2,8 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/source-sans-pro.woff2") format("woff2"),
+      url("../font/source-sans-pro.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/source-serif-pro.woff2") format("woff2"),
+      url("../font/source-serif-pro.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Source Code Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/source-code-pro.woff2") format("woff2"),
+      url("../font/source-code-pro.woff") format("woff");
+  }
+}
+
 @layer utilities {
-  [class*="bg-hero"] {
+  .bg-size-50vh[class*="bg-hero"] {
     background-size: 50vh;
   }
 }

@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['"Source Sans Pro"', "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      serif: ['"Source Serif Pro"', "serif"],
+      mono: ['"Source Code Pro"', "monospace"],
     },
     extend: {
       typography: {
