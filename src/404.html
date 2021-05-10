@@ -69,37 +69,13 @@
               <span class="ml-3 text-xl font-bold">Christopher G</span>
             </a>
             <p class="mt-5 mb-3 text-xl font-bold text-black md:text-2xl">
-              Halaman tidak ditemukan ({{placeholder "http.error.status_code"}})
+              Halaman tidak ditemukan (404)
             </p>
             <p class="mb-3 text-base font-medium text-gray-700">
               Halaman yang Anda cari telah dipindahkan atau tidak tersedia lagi.
             </p>
           </div>
         </section>
-      </div>
-      <div
-        class="flex flex-col items-center justify-center py-4 mx-auto space-x-1 text-sm text-center text-gray-500 align-middle border-b sm:flex-row divide-solid"
-      >
-        <span
-          >Alamat IP Anda:
-          <span class="font-semibold text-gray-700"
-            >{{ .Req.Header.Get "X-Forwarded-For" }}</span
-          ></span
-        >
-        <span class="hidden text-gray-700 sm:block">&#x2022;</span>
-        <span
-          >URI:
-          <span class="font-semibold text-gray-700"
-            >{{placeholder "http.request.uri.path"}}</span
-          ></span
-        >
-        <span class="hidden text-gray-700 sm:block">&#x2022;</span>
-        <span
-          >Waktu:
-          <span class="font-semibold text-gray-700"
-            >{{placeholder "time.now.common_log"}}</span
-          ></span
-        >
       </div>
     </main>
     <footer
