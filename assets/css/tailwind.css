@@ -2105,10 +2105,6 @@ html {
     justify-content: space-between;
   }
 
-  .sm\:h-screen {
-    height: 100vh;
-  }
-
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -2145,6 +2141,14 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:h-screen {
+    height: 100vh;
+  }
+
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
