@@ -1,12 +1,21 @@
-function sdgAnim(elem) {
-  var animct = elem;
-  var animsrc = `assets/json/data-${animct.dataset.goal}.json`;
-  var params = {
-    container: animct,
+function createAnimation(element) {
+  this.container = element;
+  this.params = {
+    container: this.container,
     renderer: "svg",
     loop: true,
     autoplay: true,
-    path: animsrc,
+    path: this.container.dataset.animsrc,
   };
-  return lottie.loadAnimation(params);
+  lottie.loadAnimation(this.params);
 }
+
+window.addEventListener("load", () => {
+  document.querySelectorAll(".lottie").forEach((element) => {
+    try {
+      new createAnimation(element);
+    } catch (e) {
+      return;
+    }
+  });
+});

@@ -83,20 +83,11 @@
           </div>
           <div class="object-contain w-full bg-center">
             <figure>
-              <div
-                class="lottie"
-                data-goal="goal12"
-                onmouseover="animg12.goToAndPlay(0)"
-              ></div>
+              <div class="lottie" data-animsrc="assets/json/data-goal12.json"></div>
               <figcaption class="p-2 text-center text-gray-500">
                 SDG 12 - Konsumsi dan Produksi yang Bertanggung Jawab
               </figcaption>
             </figure>
-            <script>
-              var animg12 = sdgAnim(
-                document.querySelector(".lottie[data-goal='goal12']")
-              );
-            </script>
           </div>
         </div>
 
@@ -444,11 +435,10 @@
                 lazyLoad: "nearby",
               }).mount();
             }
-            document.addEventListener("DOMContentLoaded", function () {
-              loadSliderRoti();
-            });
-            document.addEventListener("MainPageContentLoaded", function () {
-              loadSliderRoti();
+            ["load", "MainPageContentLoaded"].forEach((e) => {
+              window.addEventListener(e, () => {
+                loadSliderRoti();
+              });
             });
           </script>
           <div class="prose-sm prose sm:prose lg:prose-lg xl:prose-xl">
@@ -611,11 +601,11 @@
     </footer>
     <noscript
       ><img
-        src="https://snet.cgsv.me/ingress/cec1e2bc-424e-4180-9ac4-000cec0c486f/pixel.gif"
+        src="https://snet.sophistica.tech/ingress/cec1e2bc-424e-4180-9ac4-000cec0c486f/pixel.gif"
     /></noscript>
     <script
       defer
-      src="https://snet.cgsv.me/ingress/cec1e2bc-424e-4180-9ac4-000cec0c486f/script.js"
+      src="https://snet.sophistica.tech/ingress/cec1e2bc-424e-4180-9ac4-000cec0c486f/script.js"
     ></script>
   </body>
 </html>

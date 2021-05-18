@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Infografis Self-protection Campaign Karate dan Biografi Atlit
-    </title>
+    <title>Infografis Self-protection Campaign Karate dan Biografi Atlit</title>
     <base href="/" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="assets/css/tailwind.css" />
@@ -16,17 +14,17 @@
 
   <body class="bg-white bg-hero-i-like-food bg-size-50vh">
     <header
-      class="flex flex-col flex-wrap items-center w-full px-8 py-4 mx-auto bg-white border-b sm:justify-between sm:flex-row"
+      class="flex flex-col flex-wrap items-center w-full px-8 py-4 mx-auto bg-white border-b  sm:justify-between sm:flex-row"
     >
       <a
-        class="flex items-center mb-2 font-medium text-gray-900 title-font sm:mb-0"
+        class="flex items-center mb-2 font-medium text-gray-900  title-font sm:mb-0"
         href="/"
       >
         <img src="assets/svg/logo.svg" class="w-10 h-10 text-white" />
         <span class="ml-3 text-xl font-bold">Christopher G</span>
       </a>
       <nav
-        class="flex flex-wrap items-center justify-center text-base divide-x md:ml-auto"
+        class="flex flex-wrap items-center justify-center text-base divide-x  md:ml-auto"
       >
         <a class="px-3 hover:text-gray-900" href="/sdg12-bio.html"
           >SDG 12 - Biologi</a
@@ -40,7 +38,7 @@
       </nav>
       <a href="https://chrismark0106.wixsite.com/9cq1">
         <button
-          class="inline-flex items-center px-3 py-1 mt-2 text-base bg-gray-100 border-0 rounded focus:outline-none hover:bg-gray-200 sm:mt-0"
+          class="inline-flex items-center px-3 py-1 mt-2 text-base bg-gray-100 border-0 rounded  focus:outline-none hover:bg-gray-200 sm:mt-0"
         >
           Kembali
           <svg
@@ -67,7 +65,7 @@
         <div class="w-full mx-auto mb-4 text-left md:w-3/4 lg:w-2/3">
           <div class="pb-6 mb-6 border-b border-gray-200">
             <h1
-              class="mb-3 text-lg font-bold text-gray-900 sm:text-3xl md:leading-tight md:text-4xl"
+              class="mb-3 text-lg font-bold text-gray-900  sm:text-3xl md:leading-tight md:text-4xl"
               itemprop="headline"
               title="Infografis Self-protection Campaign Karate dan Biografi Atlit"
             >
@@ -81,42 +79,44 @@
             <figure>
               <div
                 class="lottie"
-                data-goal="goal16"
-                onmouseover="animg16.goToAndPlay(0)"
+                data-animsrc="assets/json/data-goal16.json"
               ></div>
               <figcaption class="p-2 text-center text-gray-500">
                 SDG 16 - Perdamaian, Keadilan, dan Kelembagaan yang Kuat
               </figcaption>
             </figure>
-            <script>
-              var animg16 = sdgAnim(
-                document.querySelector(".lottie[data-goal='goal16']")
-              );
-            </script>
           </div>
         </div>
 
         <div
-          class="w-full mx-auto space-y-2 border-b border-gray-200 max-w-none sm:text-justify"
+          class="w-full mx-auto space-y-2 border-b border-gray-200  max-w-none sm:text-justify"
         >
           <div class="h-screen mx-auto border-t border-b">
             <!-- class="lead"-->
-            <figure
-              class="object-contain w-auto"
-              title="Klik untuk memperbesar gambar"
-            >
+            <figure class="object-contain w-auto">
               <img
                 src="assets/img/sdg16-pe/infographic-small.png"
                 data-original="assets/img/sdg16-pe/infographic-full.png"
                 id="infographic"
                 class="object-contain h-screen p-2 mx-auto"
+                title="Klik untuk menggunakan mode layar penuh"
               />
               <script>
                 infographic = document.getElementById("infographic");
                 ["DOMContentLoaded", "MainPageContentLoaded"].forEach((e) => {
                   document.addEventListener(e, function () {
-                    const zooming = new Zooming({ scaleExtra: 0.9 });
-                    zooming.listen("#infographic");
+                    const zooming = new Zooming({
+                      scaleExtra: 0.9,
+                      onOpen: () => {
+                        infographic.title =
+                          "Klik dan tahan untuk memperbesar gambar";
+                      },
+                      onClose: () => {
+                        infographic.title =
+                          "Klik untuk menggunakan mode layar penuh";
+                      },
+                    });
+                    zooming.listen(infographic);
                   });
                 });
               </script>
@@ -124,7 +124,7 @@
           </div>
           <div
             id="bibliography"
-            class="mx-auto space-y-1 prose-sm prose text-left md:w-3/4 lg:w-2/3 sm:prose lg:prose-lg xl:prose-xl"
+            class="mx-auto space-y-1 prose-sm prose text-left  md:w-3/4 lg:w-2/3 sm:prose lg:prose-lg xl:prose-xl"
           >
             <h2>Bibliography</h2>
             <p>
@@ -228,7 +228,7 @@
           </div>
         </div>
         <div
-          class="flex flex-row justify-center w-full py-4 mx-auto mb-10 text-xs text-left md:text-sm lg:text-base md:w-3/4 lg:w-2/3 justify-items-stretch"
+          class="flex flex-row justify-center w-full py-4 mx-auto mb-10 text-xs text-left  md:text-sm lg:text-base md:w-3/4 lg:w-2/3 justify-items-stretch"
         >
           <div class="w-1/2">
             <p class="text-left text-gray-600">
@@ -240,7 +240,7 @@
       </article>
     </main>
     <footer
-      class="flex flex-col items-center justify-between px-8 py-4 mx-auto border-t sm:flex-row"
+      class="flex flex-col items-center justify-between px-8 py-4 mx-auto border-t  sm:flex-row"
     >
       <span class="mb-4 sm:mb-0">
         <p class="text-sm text-center text-gray-700 sm:text-left">
@@ -275,11 +275,11 @@
     </footer>
     <noscript
       ><img
-        src="https://snet.cgsv.me/ingress/cec1e2bc-424e-4180-9ac4-000cec0c486f/pixel.gif"
+        src="https://snet.sophistica.tech/ingress/cec1e2bc-424e-4180-9ac4-000cec0c486f/pixel.gif"
     /></noscript>
     <scrip
       defer
-      src="https://snet.cgsv.me/ingress/cec1e2bc-424e-4180-9ac4-000cec0c486f/script.js"
+      src="https://snet.sophistica.tech/ingress/cec1e2bc-424e-4180-9ac4-000cec0c486f/script.js"
     ></scrip>
   </body>
 </html>
