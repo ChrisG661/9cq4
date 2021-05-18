@@ -93,22 +93,30 @@
         >
           <div class="h-screen mx-auto border-t border-b">
             <!-- class="lead"-->
-            <figure
-              class="object-contain w-auto"
-              title="Klik untuk memperbesar gambar"
-            >
+            <figure class="object-contain w-auto">
               <img
                 src="assets/img/sdg16-pe/infographic-small.png"
                 data-original="assets/img/sdg16-pe/infographic-full.png"
                 id="infographic"
                 class="object-contain h-screen p-2 mx-auto"
+                title="Klik untuk menggunakan mode layar penuh"
               />
               <script>
                 infographic = document.getElementById("infographic");
                 ["DOMContentLoaded", "MainPageContentLoaded"].forEach((e) => {
                   document.addEventListener(e, function () {
-                    const zooming = new Zooming({ scaleExtra: 0.9 });
-                    zooming.listen("#infographic");
+                    const zooming = new Zooming({
+                      scaleExtra: 0.9,
+                      onOpen: () => {
+                        infographic.title =
+                          "Klik dan tahan untuk memperbesar gambar";
+                      },
+                      onClose: () => {
+                        infographic.title =
+                          "Klik untuk menggunakan mode layar penuh";
+                      },
+                    });
+                    zooming.listen(infographic);
                   });
                 });
               </script>
