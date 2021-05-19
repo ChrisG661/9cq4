@@ -10,12 +10,14 @@ function createAnimation(element) {
   lottie.loadAnimation(this.params);
 }
 
-window.addEventListener("load", () => {
-  document.querySelectorAll(".lottie").forEach((element) => {
-    try {
-      new createAnimation(element);
-    } catch (e) {
-      return;
-    }
+["DOMContentLoaded", "MainPageContentLoaded"].forEach((event) => {
+  window.document.addEventListener(event, () => {
+    document.querySelectorAll(".lottie").forEach((element) => {
+      try {
+        new createAnimation(element);
+      } catch (e) {
+        return;
+      }
+    });
   });
 });
