@@ -1192,6 +1192,10 @@ html {
   border-width: 0px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -1486,6 +1490,10 @@ html {
 
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+
+.fixed {
+  position: fixed;
 }
 
 * {
